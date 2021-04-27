@@ -29,7 +29,7 @@ export const Login = (props) => {
   
             try {
               const response = await axios.post(
-                '${config.localApiUrl}api/auth',
+                `${config.localApiUrl}api/auth`,
                 data,
                 config
               );
