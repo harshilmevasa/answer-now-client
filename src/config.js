@@ -1,5 +1,5 @@
 const config = {
-    localApiUrl : 'http://localhost:5000/'
+    localApiUrl : 'https://answersnow-server.herokuapp.com/'
 }
 
 export default config;
