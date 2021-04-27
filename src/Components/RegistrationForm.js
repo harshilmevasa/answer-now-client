@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from 'axios';
 import decode from 'jwt-decode';
 import { useHistory } from "react-router";
+import config from "../config";
 
 
 export const RegistrationForm = props => {
@@ -29,7 +30,7 @@ export const RegistrationForm = props => {
 
         if(state.password === state.confirmPassword) {
             console.log("You are logged in");   
-            let config = {
+            let configreq = {
                 headers: {
                   'Content-Type': 'application/json',
                 },
@@ -42,10 +43,9 @@ export const RegistrationForm = props => {
               };
     
               try {
-                const response = await axios.post(
-                  'http://localhost:5000/api/users',
+                const response = await axios.post(`${config.localApiUrl}api/users`,
                   data,
-                  config
+                  configreq
                 );
 
                 history.push('/login');
