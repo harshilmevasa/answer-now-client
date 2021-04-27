@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import { useHistory } from 'react-router';
+import config from "../config";
 
 export const ForgotPassword = (props) => {
 
@@ -20,7 +21,7 @@ export const ForgotPassword = (props) => {
     }else{
 
       e.preventDefault();  
-      let config = {
+      let configS = {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -32,9 +33,9 @@ export const ForgotPassword = (props) => {
   
         try {
           const response = await axios.post(
-            'http://localhost:5000/api/forgot-password/',
+            `${config.localApiUrl}api/forgot-password/`,
             data,
-            config
+            configS
           );
           
           console.log(response);
