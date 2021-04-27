@@ -3,6 +3,7 @@ import axios from 'axios';
 import decode from 'jwt-decode';
 import './App.css'
 import { useHistory } from "react-router";
+import config from "../config";
 
 export const Login = (props) => {
 
@@ -28,7 +29,7 @@ export const Login = (props) => {
   
             try {
               const response = await axios.post(
-                'http://localhost:5000/api/auth',
+                '${config.localApiUrl}api/auth',
                 data,
                 config
               );
