@@ -20,7 +20,7 @@
   
   
 ### Links:
-Amrinder Kaur:
+
 1. https://answernow-client.herokuapp.com/newhome
 2. https://answernow-client.herokuapp.com/login
 3. https://answernow-client.herokuapp.com/ForgotPassword
